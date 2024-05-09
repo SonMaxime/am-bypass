@@ -1,32 +1,4 @@
-### ！！必须先安装[MP4Box](https://gpac.io/downloads/gpac-nightly-builds/)，并确认[MP4Box](https://gpac.io/downloads/gpac-nightly-builds/)已正确添加到环境变量
-
-### 添加功能
-1. 调用外部MP4Box自动封装ec3为m4a
-2. 更改目录结构为 歌手名\专辑名  ;Atmos下载文件则另外移动到AM-DL-Atmos downloads，并更改目录结构为 歌手名\专辑名 [Atmos]
-3. 运行结束后显示总体完成情况
-4. 自动内嵌封面和LRC歌词（需要media-user-token，获取方式看最后的说明）
-5. 自动构建 可以到 [Actions](https://github.com/zhaarey/apple-music-alac-atmos-downloader/actions) 页面下载最新自动构建版本 可以直接`main.exe url`
-6. main_select 支持手动填写m3u8，输入#号，比如#1 #2，支持txt读取m3u8，输入txt文件名
-7. main 支持使用 go run main.go "txt文件地址"   txt文件名需要指定格式  例如  cn_1707581102_THE BOOK 3.txt     建议使用这个[Reqable 脚本代码](https://telegra.ph/Reqable-For-Apple-Music-05-01) 自动生成
-8. main 支持check 可以填入文本地址 或API数据库.
-
-本项目仅支持ALAC和Atmos
-- `alac (audio-alac-stereo)`
-- `ec3 (audio-atmos / audio-ec3)`
-
-### Python项目
-如需下载AAC推荐使用WorldObservationLog的[AppleMusicDecrypt](https://github.com/WorldObservationLog/AppleMusicDecrypt)
-
-[AppleMusicDecrypt](https://github.com/WorldObservationLog/AppleMusicDecrypt)支持以下编码
-- `alac (audio-alac-stereo)`
-- `ec3 (audio-atmos / audio-ec3)`
-- `ac3 (audio-ac3)`
-- `aac (audio-stereo)`
-- `aac-binaural (audio-stereo-binaural)`
-- `aac-downmix (audio-stereo-downmix)`
-
-
-# Apple Music ALAC / Dolby Atmos Downloader
+# AM Bypass ALAC / Dolby Atmos Downloader
 
 Original script by Sorrow. Modified by me to include some fixes and improvements.
 
@@ -41,8 +13,6 @@ Original script by Sorrow. Modified by me to include some fixes and improvements
 8. Start downloading singles: `go run main_select.go https://music.apple.com/us/album/whenever-you-need-somebody-2022-remaster/1624945511` input numbers separated by spaces.
 9. Start downloading some playlists: `go run main.go https://music.apple.com/us/playlist/taylor-swift-essentials/pl.3950454ced8c45a3b0cc693c2a7db97b` or `go run main.go https://music.apple.com/us/playlist/hi-res-lossless-24-bit-192khz/pl.u-MDAWvpjt38370N`.
 10. For dolby atmos: `go run main_atmos.go https://music.apple.com/us/album/1989-taylors-version-deluxe/1713845538`.
-
-[中文教程-详见方法三](https://telegra.ph/Apple-Music-Alac高解析度无损音乐下载教程-04-02-2)
 
 ## Downloading lyrics
 1. Open [Apple Music](https://music.apple.com) and log in
